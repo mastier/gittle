@@ -735,7 +735,7 @@ class Gittle(object):
         return self._checkout_tree(commit_tree)
 
     def checkout(self, ref):
-        """Checkout a given ref or SHA
+        """Checkout a given ref
         """
         self.repo.refs.set_symbolic_ref('HEAD', ref)
         commit_tree = self._commit_tree(ref)
